@@ -32,6 +32,6 @@ Each local photo slot is tried first. When it does not exist, a real photographi
 
 ## Deploy
 
-Vercel: Framework Preset `Vite`, Root Directory `desi-spices`, Build Command `npm run build`, Output Directory `dist`, Install Command `npm install`.
+Vercel: Framework Preset `Vite`, Root Directory `.`, Build Command `npm run build`, Output Directory `dist`, Install Command `npm install`.
 
-Netlify: Base Directory `desi-spices`, Build Command `npm run build`, Publish Directory `dist`.
+Netlify: Base Directory `.`, Build Command `npm run build`, Publish Directory `dist`.
