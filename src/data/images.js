@@ -3,7 +3,8 @@
 const photo = (file, fallback) => ({ local: `/images/${file}`, fallback });
 
 export const images = {
-  hero: photo('hero.jpg', 'https://images.unsplash.com/photo-1771554753130-9e63a3f63e4d?auto=format&fit=crop&w=2400&q=88'),
+  // Warm restaurant interior: visible dining tables and chairs, used until hero.jpg is supplied.
+  hero: photo('hero.jpg', 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2400&q=88'),
   story: {
     main: photo('ambience-1.jpg', 'https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1200&q=85&fit=crop'),
     detail: photo('ambience-2.jpg', 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=900&q=85&fit=crop')
