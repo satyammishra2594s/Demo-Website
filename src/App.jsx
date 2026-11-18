@@ -110,8 +110,8 @@ function Hero() {
   const videoRef = useRef(null);
   const [videoReady, setVideoReady] = useState(false);
   return <section className="hero" id="home">
-    <Photo src={images.hero.local} fallback={images.hero.fallback} alt="Warm café-style restaurant interior with wooden dining tables, chairs and pendant lights" className="hero-poster"/>
-    <video ref={videoRef} className={cx('hero-video', videoReady && 'video-ready')} autoPlay muted loop playsInline poster={images.hero.local} onCanPlay={() => setVideoReady(true)} onError={() => setVideoReady(false)} aria-hidden="true"><source src="/images/hero.mp4" type="video/mp4"/></video>
+    <Photo src={images.hero.local} fallback={images.hero.fallback} alt="Warm café-style restaurant interior with wooden dining tables, chairs and pendant lights" className="hero-poster" loading="eager" fetchPriority="high"/>
+    <video ref={videoRef} className={cx('hero-video', videoReady && 'video-ready')} autoPlay muted loop playsInline preload="none" poster={images.hero.fallback} onCanPlay={() => setVideoReady(true)} onError={() => setVideoReady(false)} aria-hidden="true"><source src="/images/hero.mp4" type="video/mp4"/></video>
     <div className="hero-shade"/><div className="hero-grain"/>
     <div className="wrap hero-content"><Reveal><span className="hero-kicker">A TABLE FULL OF INDIA</span><h1>Come for the<br/><em>flavour.</em> Stay for<br/>the feeling.</h1><p>From the first fragrant tadka to the last bite of something sweet, every meal is a reason to gather.</p><div className="hero-actions"><Link to="/reservations" className="button button-light">Reserve a Table <ArrowUpRight size={16}/></Link><Link to="/menu" className="button button-text-light">View Menu <ArrowRight size={16}/></Link></div></Reveal></div>
     <div className="hero-bottom wrap"><span>FRESHLY PREPARED · ALWAYS WELCOMING</span><a href="#about">SCROLL TO FEEL THE PLACE <span>↓</span></a><span>11:00 AM — 11:00 PM</span></div>
